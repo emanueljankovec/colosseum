@@ -1,0 +1,78 @@
+
+/*
+Theme Name:   Understrap Colosseum
+Theme URI:    https://astrid-solution.com/
+Description:  Astrid Solutions
+Author:       Astrid Solutions
+Author URI:   https://astrid-solution.com/
+Template:     understrap
+Version:      1.0.0
+Text Domain:  understrap-child
+*/
+
+#page-wrapper {
+    height: 123565px;
+}
+
+#wpadminbar {
+    display: none;
+}
+
+* {
+    font-family: 'Montserrat';
+}
+
+html {
+    margin-top: 0px!important;
+}
+
+
+/* NAVBAR STARTS HERE */
+
+#colosseum_header .navbar {
+    padding: 0px;
+    padding: 48px 0px;
+    -webkit-transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -o-transition: all ease-out 0.3s;
+    transition: all ease-out 0.3s;
+}
+
+#colosseum_header .navbar.scrolled {
+    background-color: #FF9100;
+}
+
+.colosseum_navbar {
+    justify-content: center;
+}
+
+.colosseum_navbar .navbar-nav {
+    align-items: center;
+}
+
+.colosseum_navbar#navbarNav .nav-item {
+    margin-left: 85px;
+}
+
+.colosseum_navbar#navbarNav .nav-item:first-child {
+    margin-left: 0px;
+}
+
+.colosseum_navbar#navbarNav .nav-link {
+    color: #000;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+    padding: 0px;
+}
+
+.colosseum_navbar#navbarNav .nav-item.book-now {
+    background-color: #FF9100;
+    padding: 8px 43px 8px 47px;
+}
+
+.colosseum_navbar#navbarNav .nav-item.book-now a {
+    color: #000013;
+    line-height: 24px;
+}
+/* NAVBAR ENDS HERE */

@@ -1,9 +1,13 @@
 cPanel
 Username: cobend
-Passowrd: 
+Passowrd: sxrjzpkg#Y[V
 
 
 SBB nalog
 Email: colosseumbendnis@gmail.com
 Username: colosseumbend
 Password: Colosseum123
+
+wordpess:
+username: cobend
+password: %qWUk#7G$w
