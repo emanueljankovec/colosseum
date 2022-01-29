@@ -11,6 +11,13 @@
 defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
+
+$menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+
+$menuID = $menuLocations['primary']; // Get the *primary* menu ID
+
+$primaryNav = wp_get_nav_menu_items($menuID);
+
 ?>
 
 
@@ -20,30 +27,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row justify-content-center">
 
-			<div class="col-md-6">
+			<div class="col-md-12">
 
 				<footer class="site-footer" id="colophon">
 
-					<div class="site-info">
+					<div class="site-info-holder">
 
 						<div class="footer_title">
 							Colosseum Bend
 						</div>
 
-						<?php 
-							$menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
-							// This returns an array of menu locations ([LOCATION_NAME] = MENU_ID);
-
-							$menuID = $menuLocations['primary']; // Get the *primary* menu ID
-
-							$primaryNav = wp_get_nav_menu_items($menuID);
-
-							foreach($primaryNav as $menu) {
-								
-							}
+						<div class="footer_navigation">
+							<?php foreach($primaryNav as $menu) : ?>
+								<div class="nav-item <?php if($menu->title == "Rezerviši") echo "hide"; ?>">
+									<a class="nav-link" href="<?= $menu->url; ?>"><?= $menu->title ?></a>
+								</div>
+							<?php endforeach; ?>
+						</div>
 						
-							// var_dump($primaryNav); 
-						?>
+						<div class="footer-bottom-part">
+							© 2022 Colosseum bend. All rights reserved.
+						</div>
 
 					</div><!-- .site-info -->
 
