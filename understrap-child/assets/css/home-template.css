@@ -1,0 +1,238 @@
+#colosseum_wrapper {
+    padding: 0px;
+}
+
+#colosseum_home_page_main_photo {
+    background-image: url('../images/home_main_photo.png');
+    background-position-x: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+
+#colosseum_home_page_main_photo #content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#colosseum_home_page_main_photo .row {
+    height: 100%;
+    align-items: flex-end;
+}
+
+#colosseum_home_page_main_photo .colosseum_main_logo_holder {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+#colosseum_home_page_main_photo .colosseum_main_logo_holder img {
+    width: 300px;
+}
+
+#colosseum_home_page_main_photo .colosseum_logo_title {
+    font-family: 'Hunter River';
+    /* font-size: 70px; */
+    font-size: 60px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 40%;
+    left: -80px;
+    transform: matrix(0.99, -0.1, 0.1, 0.99, 0, 0);
+    width: max-content;
+}
+
+#colosseum_home_page_main_photo .colosseum_home_arrow {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#colosseum_home_page_main_photo .colosseum_main_photo_bottom_part {
+    font-size: 20px;
+    color: #FFFFFF;
+    width: 270px;
+    text-align: center;
+}
+ 
+#colosseum_home_page_main_photo .colosseum_home_main_holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 46px;
+}
+
+#colosseum_home_about {
+    background-image: url('../images/home_about_photo.png');
+    background-position-x: center;
+    background-repeat: no-repeat;
+    height: calc(100vh + 200px);
+    padding-top: 95px;
+    padding-bottom: 47px;
+}
+
+#colosseum_home_about .about_title {
+    font-size: 60px;
+    line-height: 61px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 22px;
+}
+
+#colosseum_home_about .about_description_holder {
+    display: flex;
+    justify-content: space-between;
+}
+
+#colosseum_home_about .cb_devider {
+    width: 159px;
+    height: 10px;
+    background-color: #FF9100;
+    margin-bottom: 57px;
+}
+
+#colosseum_home_about .about_description {
+    padding-top: 40px;
+}
+
+#colosseum_home_about .about_text {
+    font-size: 30px;
+    line-height: 35px;
+    color: #FFFFFF;
+    max-width: 656px;
+    margin-bottom: 48px;
+}
+
+#colosseum_home_about .about_see_more {
+    font-size: 20px;
+    line-height: 22px;
+    color: #FF9100;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+#colosseum_home_about .about_see_more svg {
+    width: 12px;
+    height: 12px;
+    margin-left: 7px;
+}
+
+#colosseum_home_about .about_bottom_part {
+    position: relative;
+    width: 100%;
+}
+
+#colosseum_home_about .about_bottom_part img {
+    position: absolute;
+    top: -37px;
+}
+
+#colosseum_home_upcoming_events {
+    background-color: #000013;
+    padding: 93px 0px 231px 0px;
+}
+
+#colosseum_home_upcoming_events .home_events_holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#colosseum_home_upcoming_events .events_title {
+    font-size: 50px;
+    line-height: 61px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#colosseum_home_upcoming_events .evennts_description {
+    max-width: 447px;
+    font-size: 15px;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 93px;
+}
+
+#colosseum_home_upcoming_events .events_dates_holder {
+    display: flex;
+    flex-direction: column;
+    max-width: 687px;
+    width: 100%;
+    margin-bottom: 115px;
+}
+
+#colosseum_home_upcoming_events .event_description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 29px;
+    border-bottom: 1px solid #707070;
+    margin-bottom: 21px;
+    padding-right: 93px;
+    padding-left: 5px;
+} 
+
+#colosseum_home_upcoming_events .event_description:last-child {
+    border-bottom: unset;
+    padding-bottom: unset;
+    margin-bottom: unset;
+}
+
+#colosseum_home_upcoming_events .date_holder, 
+#colosseum_home_upcoming_events .city_holder {
+    display: flex;
+    flex-direction: column;
+}
+
+#colosseum_home_upcoming_events .date_holder  {
+    font-size: 30px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#colosseum_home_upcoming_events .date_holder span {
+    font-size: 21px;
+}
+
+#colosseum_home_upcoming_events .city_holder {
+    font-size: 21px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#colosseum_home_upcoming_events .city_holder span {
+    font-weight: 400;
+}
+
+#colosseum_home_upcoming_events .place_holder {
+    font-size: 20px;
+    line-height: 24px;
+    color: #FF9100;
+    font-weight: bold;
+}
+
+#colosseum_home_upcoming_events .events_see_more {
+    font-size: 20px;
+    line-height: 22px;
+    color: #FF9100;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+#colosseum_home_upcoming_events .events_see_more svg {
+    width: 12px;
+    height: 12px;
+    margin-left: 7px;
+}

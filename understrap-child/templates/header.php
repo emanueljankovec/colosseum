@@ -5,8 +5,9 @@
 
     $primaryNav = wp_get_nav_menu_items($menuID);
 
-
 ?>
+
+<div class="header_spacer"></div>
 
 <nav class="navbar fixed-top navbar-expand-lg colosseum_navbar_container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

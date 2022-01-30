@@ -9,21 +9,20 @@ Version:      1.0.0
 Text Domain:  understrap-child
 */
 
-
-#wpadminbar {
-    display: none;
+@font-face {
+    font-family: 'Hunter River';
+	src: url('assets/fonts/HunterRiver-Regular.otf');
 }
 
 * {
     font-family: 'Montserrat';
 }
 
-html {
-    margin-top: 0px!important;
-}
-
-
 /* NAVBAR STARTS HERE */
+
+/* #colosseum_header .header_spacer {
+    height: 128px;
+} */
 
 #colosseum_header .navbar {
     padding: 0px;
@@ -126,4 +125,21 @@ html {
     color: #000013;
 }
 
+#colosseum-footer .footer-bottom-part a {
+    color: #000013;
+}
+
+#colosseum-footer .colosseum_social_icons_holder {
+    display: flex;
+    align-items: center;
+    margin-bottom: 73px;
+}
+
+#colosseum-footer .colosseum_cocial_icon {
+    margin-left: 50px;
+}
+
+#colosseum-footer .colosseum_cocial_icon:first-child {
+    margin-left: 0px;
+}
 /* FOOTER ENDS HERE */

@@ -9,5 +9,5 @@ Username: colosseumbend
 Password: Colosseum123
 
 wordpess:
-username: cobend
+username: colosseum
 password: %qWUk#7G$w
