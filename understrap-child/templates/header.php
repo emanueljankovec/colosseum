@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse colosseum_navbar" id="navbarNav">
         <ul class="navbar-nav">
             <?php foreach($primaryNav as $menu) : ?>
-                <li class="nav-item <?php if($menu->title == "Rezerviši") echo "book-now"; ?>">
+                <li class="nav-item <?php if($menu->title == "Rezerviši") echo "book-now"; ?> <?php if( $menu->object_id == get_queried_object_id() ) echo "active"; ?>">
                     <a class="nav-link" href="<?= $menu->url; ?>"><?= $menu->title ?></a>
                 </li>
             <?php endforeach; ?>

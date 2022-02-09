@@ -12,6 +12,7 @@ function colosseum_enqueue_styles() {
     wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css' );
     wp_enqueue_style( 'home-template-css', get_stylesheet_directory_uri() . '/assets/css/home-template.css' );
     wp_enqueue_style( 'contact-template-css', get_stylesheet_directory_uri() . '/assets/css/contact-template.css' );
+    wp_enqueue_style( 'about-us-template-css', get_stylesheet_directory_uri() . '/assets/css/about-us-template.css' );
 }
 
 add_action( 'wp_enqueue_scripts', 'colosseum_enqueue_styles' );

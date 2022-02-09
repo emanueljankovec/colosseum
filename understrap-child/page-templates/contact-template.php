@@ -16,6 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 if ( is_front_page() ) {
 	get_template_part( 'global-templates/hero' );
 }
+
 ?>
 
 <div class="wrapper" id="colosseum_contact_holder">
@@ -36,27 +37,28 @@ if ( is_front_page() ) {
 								<a href="tel:00381691333422">Telefon: <span>+381 69 133 34 22</span></a>
 							</div>
 						</div>
-						<form action="" method="post">
+						<form method="post">
 							<div class="colosseum_contact_form">
 								<div class="form_name_holder">
 									<div class="conctact_form_name_holder">
 										<span>Ime</span>
-										<input type="text" name="name" id="">
+										<input type="text" name="name" id="name_input">
 									</div>
 									<div class="conctact_form_lastname_holder">
 										<span>Prezime</span>
-										<input type="text" name="last-name" id="">
+										<input type="text" name="last-name" id="last_name_input">
 									</div>
 								</div>
 								<div class="conctact_form_email_holder">
 									<span>Email</span>
-									<input type="email" name="email" id="">
+									<input type="email" name="email" id="email_input">
 								</div>
 								<div class="concat_form_message_holder">
 									<span>Vaša poruka</span>
-									<textarea name="" id="" cols="30" rows="10"></textarea>
+									<textarea name="message" id="message_input" cols="30" rows="10"></textarea>
 								</div>
-								<input type="submit" value="Pošalji" class="colosseum_form_submit_btn">
+								<button class="colosseum_form_submit_btn">Pošalji</button>
+								<input type="hidden" id="ajax_url" value="<?php echo get_stylesheet_directory_uri() . '/page-templates/contactAjax.php'; ?>"/>
 							</div>
 						</form>
 						<div class="colosseum_form_bottom_part">

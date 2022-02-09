@@ -46,7 +46,19 @@ Text Domain:  understrap-child
 }
 
 .colosseum_navbar#navbarNav .nav-item {
-    margin-left: 85px;
+    /* margin-left: 85px; */
+    padding: 8px 43px 8px 47px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.colosseum_navbar#navbarNav .nav-item:hover {
+    background-color: #FF9100;
+}
+
+.colosseum_navbar#navbarNav .nav-item:hover a {
+    color: #000013;
+    line-height: 24px;
 }
 
 .colosseum_navbar#navbarNav .nav-item:first-child {
@@ -61,7 +73,16 @@ Text Domain:  understrap-child
     padding: 0px;
 }
 
-.colosseum_navbar#navbarNav .nav-item.book-now {
+.colosseum_navbar#navbarNav .nav-item.active{
+    background-color: #FF9100;
+}
+
+.colosseum_navbar#navbarNav .nav-item.active a {
+    color: #000013;
+    line-height: 24px;
+}
+
+/* .colosseum_navbar#navbarNav .nav-item.book-now {
     background-color: #FF9100;
     padding: 8px 43px 8px 47px;
 }
@@ -69,7 +90,7 @@ Text Domain:  understrap-child
 .colosseum_navbar#navbarNav .nav-item.book-now a {
     color: #000013;
     line-height: 24px;
-}
+} */
 
 /* NAVBAR ENDS HERE */
 
