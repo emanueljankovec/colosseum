@@ -1,0 +1,188 @@
+#colosseum_calendar {
+    background-color: #000013;
+    height: 100vh;
+}
+
+#calendar {
+    max-width: 790px;
+    margin: auto;
+}
+
+.colosseum_calendar_message {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+
+.colosseum_calendar_title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #FF9100;
+    line-height: 40px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.colosseum_calendar_title svg {
+    width: 23px;
+    height: 23px;
+    fill: #FF9100;
+    margin-right: 18px;
+}
+
+#colosseum_calendar .fc .fc-col-header-cell-cushion {
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+#colosseum_calendar .fc .fc-col-header-cell-cushion:hover {
+    text-decoration: none;
+}
+
+#colosseum_calendar .fc .fc-daygrid-day-number {
+    color: #FFFFFF;
+}
+
+#colosseum_calendar .fc .fc-daygrid-day-frame:hover {
+    cursor: pointer;
+}
+
+#colosseum_calendar .fc .fc-day-other .fc-daygrid-day-top {
+    opacity: 1;
+}
+
+#colosseum_calendar .fc .fc-day-other .fc-daygrid-day-top a {
+    color: #707070;
+}
+
+#colosseum_calendar .fc .fc-toolbar.fc-header-toolbar {
+    flex-direction: column;
+    position: relative;
+    width: 400px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+#colosseum_calendar .fc .fc-button-group {  
+    position: static;
+}
+
+#colosseum_calendar .fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: transparent;
+    border: none;
+    color: #FF9100;
+}
+
+#colosseum_calendar .fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: transparent;
+    border: none;
+    color: #FF9100;
+}
+
+#colosseum_calendar .fc-direction-ltr .fc-button-group > .fc-button:not(:last-child):focus, 
+#colosseum_calendar .fc-direction-ltr .fc-button-group > .fc-button:not(:first-child):focus {
+    box-shadow: none;
+}
+
+#colosseum_calendar .fc .fc-toolbar-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 37px;
+    text-transform: capitalize;
+    min-width: 270px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#colosseum_calendar .fc .fc-button-primary {
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    padding: 4px 17px;
+    border-radius: 10px;
+}
+
+#colosseum_calendar .fc .fc-button-primary:disabled {
+    background-color: #707070;
+}
+
+#colosseum_calendar .fc .fc-button-primary:not(:disabled) {
+    background-color: #FF9100;
+}
+
+#colosseum_calendar .fc .fc-daygrid-day-top {
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#colosseum_calendar .fc .fc-daygrid-day.fc-day-today {
+    background-color: unset;
+}
+
+#colosseum_calendar .fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+    background-color: #FF9100;
+    border-radius: 6px;
+}
+
+#colosseum_calendar .fc-h-event .fc-event-title-container {
+    display: flex;
+    justify-content: center;
+}
+
+#colosseum_calendar .modal.show .modal-dialog {
+    max-width: 700px;
+}
+
+#colosseum_calendar .modal-header {
+    border-bottom: none;
+    padding: 61px 20px 0px 47px;
+}
+
+#colosseum_calendar .modal-header .close {
+    position: absolute;
+    top: 31px;
+    right: 34px;
+    background-image: url('../icons/modal_close.svg');
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#colosseum_calendar .modal-body {
+    padding: 46px 20px 61px 47px;
+}
+
+#colosseum_calendar .modal-body img {
+    width: 33px;
+    margin-right: 20px;
+}
+
+#colosseum_calendar .contact_instagram,
+#colosseum_calendar .contact_phone {
+    margin-bottom: 40px;
+}
+
+#colosseum_calendar .contact_instagram a, 
+#colosseum_calendar .contact_phone a, 
+#colosseum_calendar .contacnt_mail a {
+    color: #000013;
+    font-size: 25px;
+    line-height: 30px;
+    text-decoration: none;
+}

@@ -37,34 +37,36 @@ $primaryNav = wp_get_nav_menu_items($menuID);
 							Colosseum Bend
 						</div>
 
-						<div class="footer_navigation">
-							<?php foreach($primaryNav as $menu) : ?>
-								<div class="nav-item <?php if($menu->title == "Rezerviši") echo "hide"; ?>">
-									<a class="nav-link" href="<?= $menu->url; ?>"><?= $menu->title ?></a>
-								</div>
-							<?php endforeach; ?>
-						</div>
+						<div class="colosseum_footer_navigation_holder">
+							<div class="footer_navigation">
+								<?php foreach($primaryNav as $menu) : ?>
+									<div class="nav-item <?php if($menu->title == "Rezerviši") echo "hide"; ?>">
+										<a class="nav-link" href="<?= $menu->url; ?>"><?= $menu->title ?></a>
+									</div>
+								<?php endforeach; ?>
+							</div>
 
-						<div class="colosseum_social_icons_holder">
-							<div class="colosseum_cocial_icon">
-								<a href="https://www.facebook.com/colosseumbendofficial" target="_blank">
-									<img src="<?= get_stylesheet_directory_uri() . '/assets/icons/cb_facebook.png' ?>" alt="Facebook">
-								</a>
-							</div>
-							<div class="colosseum_cocial_icon">
-								<a href="https://www.instagram.com/colosseum_bend_official/" target="_blank">
-									<img src="<?= get_stylesheet_directory_uri() . '/assets/icons/cb_instagram.png' ?>" alt="Instagram">
-								</a>
-							</div>
-							<div class="colosseum_cocial_icon">
-								<a href="https://www.youtube.com/channel/UC_2P3v0fnjFs8U5Z5t7X4vA/featured" target="_blank">
-									<img src="<?= get_stylesheet_directory_uri() . '/assets/icons/cb_youtube.png' ?>" alt="Youtube">
-								</a>
-							</div>
-							<div class="colosseum_cocial_icon">
-								<a href="mailto:colosseumbendnis@gmail.com" target="_blank">
-									<img src="<?= get_stylesheet_directory_uri() . '/assets/icons/cb_mail.png' ?>" alt="Mail">
-								</a>
+							<div class="colosseum_social_icons_holder">
+								<div class="colosseum_cocial_icon">
+									<a href="https://www.facebook.com/colosseumbendofficial" target="_blank">
+										<img src="<?= get_stylesheet_directory_uri() . '/assets/icons/cb_facebook.png' ?>" alt="Facebook">
+									</a>
+								</div>
+								<div class="colosseum_cocial_icon">
+									<a href="https://www.instagram.com/colosseum_bend_official/" target="_blank">
+										<img src="<?= get_stylesheet_directory_uri() . '/assets/icons/cb_instagram.png' ?>" alt="Instagram">
+									</a>
+								</div>
+								<div class="colosseum_cocial_icon">
+									<a href="https://www.youtube.com/channel/UC_2P3v0fnjFs8U5Z5t7X4vA/featured" target="_blank">
+										<img src="<?= get_stylesheet_directory_uri() . '/assets/icons/cb_youtube.png' ?>" alt="Youtube">
+									</a>
+								</div>
+								<div class="colosseum_cocial_icon">
+									<a href="mailto:colosseumbendnis@gmail.com" target="_blank">
+										<img src="<?= get_stylesheet_directory_uri() . '/assets/icons/cb_mail.png' ?>" alt="Mail">
+									</a>
+								</div>
 							</div>
 						</div>
 						

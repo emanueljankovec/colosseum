@@ -17,6 +17,51 @@ if ( is_front_page() ) {
 	get_template_part( 'global-templates/hero' );
 }
 
+$objectTodayTime = new DateTime('NOW');
+$todayTimeFormated = $objectTodayTime->format('Y-m-d');
+
+$nextYearTodayTime = $objectTodayTime->add(new DateInterval('P1Y'));
+$nextYearTodayTimeFormated = $nextYearTodayTime->format('Y-m-d');
+
+
+$api_url = 'https://api.teamup.com/ksf2qekf55mph37dxj/events?startDate=' . $todayTimeFormated . '&endDate=' . $nextYearTodayTimeFormated;
+
+if(get_transient('full-calendar-api-response') != false) {
+	$response = get_transient('full-calendar-api-response');
+} else {
+	$response = wp_remote_get( $api_url ,
+		array( 
+			'timeout' => 10,
+			'headers' => array( 
+				'Teamup-Token' => '63dafbe407a76372cd6c3d340e890178ee108904945614eb8533ee3f526bc62b',
+			) 
+		)
+	);
+	set_transient('full-calendar-api-response', $response['body'], 3600);
+	$response = $response['body'];
+}
+
+$response = json_decode($response);
+
+$counter = 0;
+$fullCalendarEvents = [];
+foreach($response->events as $responseItem) {
+    $counter++;
+    if($counter > 4) break;
+
+	$fullCalendarEvent = new stdClass();
+	$responseItemDate = date('d-M', strtotime($responseItem->start_dt));
+    $fullCalendarEvent->date = explode('-', $responseItemDate);
+
+	$fullCalendarEvent->title = $responseItem->title;
+    $fullCalendarEvent->location = $responseItem->location;
+
+	
+	
+	$fullCalendarEvents[] = $fullCalendarEvent;
+}
+
+
 $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
 
 $menuID = $menuLocations['primary']; // Get the *primary* menu ID
@@ -49,12 +94,10 @@ foreach($primaryNav as $menu) {
                 <div class="row">
 
                     <div class="col-md-12 content-area extended" id="primary">
-
+                        <div class="colosseum_home_logo_mobile">
+                            <div class="colosseum_mobile_text">Colosseum Bend</div>
+                        </div>
                         <div class="colosseum_home_main_holder">
-                            <div class="colosseum_main_logo_holder">
-                                <img src="<?= get_stylesheet_directory_uri() . '/assets/images/colosseum_logo.png' ?>" alt="Colosseum Logo">
-                                <div class="colosseum_logo_title">Colosseum Band</div>
-                            </div>
                             <div class="colosseum_home_arrow">
                                 <img src="<?= get_stylesheet_directory_uri() . '/assets/icons/arrow.png' ?>" alt="Arrow">
                             </div>
@@ -85,7 +128,8 @@ foreach($primaryNav as $menu) {
                                 <div class="about_description">
                                     <div class="cb_devider"></div>
                                     <div class="about_text">
-                                        Mi smo bend koji je nastao 2009 godine i dosta dugo se bavimo muzikom. Muzika za nas nije samo nešto što se treba odraditi i odsvirati. Mi to doživljavamo na jako specifičan način...
+                                        <span>COLOSSEUM BEND</span> zvanicno postoji od kraja 2009-e godine i nastao je iz hobija i ljubavi prema muzici i druzenju.
+                                        Period koncipiranja, uskladjivanja i prosirivanja repertoara, kao i sam koncept rada po kome je bend danas prepoznatljiv...    
                                     </div>
                                     <a class="about_see_more" href="<?= $aboutUsUrl; ?>">
                                         Saznajte više
@@ -123,15 +167,21 @@ foreach($primaryNav as $menu) {
                                 <?php for($i = 0; $i < 4; $i++) : ?>
                                     <div class="event_description">
                                         <div class="date_holder">
-                                            28
-                                            <span>Jan</span>
+                                            <?= $fullCalendarEvents[$i]->date[0]; ?>
+                                            <span><?= $fullCalendarEvents[$i]->date[1]; ?></span>
                                         </div>
                                         <div class="city_holder">
-                                            Niš, Srbija 
-                                            <span>Svadba</span>
+                                            <?php 
+                                                if($fullCalendarEvents[$i]->location != "") {
+                                                    echo $fullCalendarEvents[$i]->location;
+                                                } else {
+                                                    echo "Niš";
+                                                }
+                                             ?>
+                                            
                                         </div>
                                         <div class="place_holder">
-                                            Kafana "Stari grad"
+                                            <?= $fullCalendarEvents[$i]->title; ?>
                                         </div>
                                     </div>
                                 <?php endfor; ?>

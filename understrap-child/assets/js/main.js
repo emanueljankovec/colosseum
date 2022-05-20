@@ -23,21 +23,29 @@ jQuery(document).ready(function($) {
         }, 500);
     });
 
-    $(document).on("click", ".colosseum_form_submit_btn", function(e) {
-
-        var action = "send_mail";
-        var data = {};
-        var ajaxUrl = $("#ajax_url").val();
-        data.action = action;
-        var msg = {};
-        msg.name = $('#name_input').val();
-        msg.email = $('#last_name_input').val();
-        msg.message = $('#email_input').val();
-        
-        $.post(ajaxUrl, data, function(res){
-            $(".colosseum_form_bottom_part").empty().html(res);
-        })
+    // Increase nav item with in footer
+    $('.footer_navigation .nav-item').each( function() {
+        var navItemWidth =  $(this).width();
+        navItemWidth = navItemWidth + 5;
+        $(this).width(navItemWidth);
     });
 
-    
+    $(document).on("click", "#colosseum_calendar .fc .fc-daygrid-day-frame", function(e) {
+        $("#calendar_modal").modal('show');
+        $(".colosseum_navbar_container").css("padding-right", "17px");
+    });
+
+    $(document).on('click', '.colosseum_mobile_hamburger', function() {
+        if($(this).closest('.colosseum_navbar_container').find('.colosseum_mobile_navbar').css('display') == 'none') {
+            $(this).closest('.colosseum_navbar_container').find('.colosseum_mobile_navbar').slideDown(200);
+            $(this).find('.nav_close_icon').show();
+            $(this).find('.nav_open_icon').hide();
+        } else {
+            $(this).closest('.colosseum_navbar_container').find('.colosseum_mobile_navbar').slideUp(200);
+            $(this).find('.nav_close_icon').hide();
+            $(this).find('.nav_open_icon').show();
+        }
+        
+    });
+
 });

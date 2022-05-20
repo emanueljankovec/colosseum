@@ -35,7 +35,21 @@ if ( is_front_page() ) {
                         <div class="colosseum_about_us_description_holder">
                             <div class="colosseum_about_us_title">Malo o nama...</div>
                             <div class="colosseum_about_us_description">
-                                Bend je nastao iz prave i istinske ljubavi prema muzici… a kad se u to još uključeni ljudi koji pravo uživaju u tome, onda tako nastane spoj zvani <span>Colosseum bend</span>. Nastali smo još 2009 godine, i sve do danas smo jako predani svom poslu.
+                                <?= nl2br(
+                                    '<span>COLOSSEUM BEND</span> zvanicno postoji od kraja 2009-e godine i nastao je iz hobija i ljubavi prema muzici i druzenju.
+
+                                    Period koncipiranja, uskladjivanja i prosirivanja repertoara, kao i sam koncept rada po kome je bend danas prepoznatljiv, nije bio kratak i jednostavan, bilo je potrebno mnogo ljubavi i odricanja da bi se doslo do nivoa na kom je COLOSSEUM danas.
+
+                                    Danas, COLOSSEUM BEND, predstavlja jedinstvenu energiju, koju sa sobom nose svi clanovi benda, pre svega prijatelji, a posle i kolege, po toj energiji i atmosferi koju ova ekipa donosi smo i najprepoznatljiviji.
+
+                                    Uvek smo spremni i raspolozeni da se repertoarom i dinamikom prilagodimo
+
+                                    svima. Prenosimo svoju medjusobnu, lepu  i cistu energiju na sve prisutne i uzivamo u uzvracanju kroz osmehe i odlican provod.
+
+                                    Dugogodisnje profesionalno iskustvo i vrhunska svirka garancija je vrhunskog provoda na nasim nastupima.
+
+                                    Pre svega, profesionalan, ozbiljan pristup, najkvalitetnija muzicka oprema, rasveta i celokupan i efikasan scenski nastup se kod <span>COLOSSEUM BENDA</span> podrazumevaju.') ?>
+                                
                             </div>
                         </div>
 

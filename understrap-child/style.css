@@ -20,10 +20,6 @@ Text Domain:  understrap-child
 
 /* NAVBAR STARTS HERE */
 
-/* #colosseum_header .header_spacer {
-    height: 128px;
-} */
-
 #colosseum_header .navbar {
     padding: 0px;
     padding: 48px 0px 40px 0px;
@@ -46,7 +42,6 @@ Text Domain:  understrap-child
 }
 
 .colosseum_navbar#navbarNav .nav-item {
-    /* margin-left: 85px; */
     padding: 8px 43px 8px 47px;
     transition: 0.3s;
     cursor: pointer;
@@ -58,7 +53,6 @@ Text Domain:  understrap-child
 
 .colosseum_navbar#navbarNav .nav-item:hover a {
     color: #000013;
-    line-height: 24px;
 }
 
 .colosseum_navbar#navbarNav .nav-item:first-child {
@@ -70,27 +64,35 @@ Text Domain:  understrap-child
     font-size: 20px;
     line-height: 22px;
     font-weight: 600;
-    padding: 0px;
+    padding: 8px 0px 8px 0px;
 }
 
-.colosseum_navbar#navbarNav .nav-item.active{
+.colosseum_navbar#navbarNav .nav-item-holder {
+    position: relative;
+}
+
+.colosseum_navbar#navbarNav .nav-item.active .nav-item-holder div {
     background-color: #FF9100;
+    width: 100%;
+    height: 4px;
+    position: absolute;
 }
 
-.colosseum_navbar#navbarNav .nav-item.active a {
-    color: #000013;
-    line-height: 24px;
+.colosseum_navbar#navbarNav .nav-item.active:hover a {
+    border-bottom: unset;
 }
 
-/* .colosseum_navbar#navbarNav .nav-item.book-now {
-    background-color: #FF9100;
-    padding: 8px 43px 8px 47px;
+.colosseum_mobile_navbar {
+    display: none;
 }
 
-.colosseum_navbar#navbarNav .nav-item.book-now a {
-    color: #000013;
-    line-height: 24px;
-} */
+.colosseum_mobile_logo {
+    display: none;
+}
+
+.colosseum_mobile_hamburger {
+    display: none;
+}
 
 /* NAVBAR ENDS HERE */
 
@@ -126,6 +128,11 @@ Text Domain:  understrap-child
     line-height: 24px;
     color: #000013;
     padding: 0px;
+    transition: 0.3s;
+}
+
+#colosseum-footer .footer_navigation .nav-link:hover {
+    font-weight: bold;
 }
 
 #colosseum-footer .footer_navigation .nav-item {
@@ -158,9 +165,83 @@ Text Domain:  understrap-child
 
 #colosseum-footer .colosseum_cocial_icon {
     margin-left: 50px;
+    transition: 0.3s;
 }
 
 #colosseum-footer .colosseum_cocial_icon:first-child {
     margin-left: 0px;
 }
+
+#colosseum-footer .colosseum_cocial_icon:hover {
+    transform: scale(1.2);
+}
+
 /* FOOTER ENDS HERE */
+
+
+@media(max-width: 1279px) {
+
+    #colosseum_header  .colosseum_desktop_navbar {
+        display: none;
+    }
+    
+    #colosseum_header .navbar {
+        background-color: #000013;
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .colosseum_mobile_navbar {
+        position: fixed;
+        top: 0;
+        background-color: #000013;
+        width: 100%;
+        left: 0;
+        height: 100vh;
+        z-index: -1;
+        padding-top: 130px;
+    }
+
+    .colosseum_mobile_logo {
+        display: block;
+        width: 25px;
+        height: 28px;
+        background-image: url('./assets/images/colosseum_logo.png');
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    .colosseum_mobile_hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .colosseum_navbar#navbarNav .nav-item {
+        text-align: center;
+        padding-right: 0;
+        list-style-type: none;
+        position: relative;
+    }
+
+    .colosseum_navbar#navbarNav .nav-item.active .nav-item-holder div {
+        width: 55%;
+        right: 0;
+        height: 3px;
+    }
+
+    .colosseum_navbar#navbarNav .nav-item:hover {
+        background-color: unset;
+    }
+
+    .colosseum_navbar#navbarNav .nav-item:hover a {
+        color: #fff;
+    }
+
+    .nav_close_icon {
+        display: none;
+    }
+
+    .colosseum_navbar#navbarNav .nav-item-holder {
+        position: static;
+    }
+}

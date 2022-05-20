@@ -1,0 +1,205 @@
+.colosseum_callery_holder {
+    background-color: #000013;
+}
+
+.colosseum_gallery_title_holder {
+    font-size: 70px;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 570px;
+    text-align: center;
+    margin: auto;
+    margin-top: 130px;
+}
+
+.colosseum_gallery_title_holder span {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.colosseum_active_video {
+    width: 709px;    
+}
+
+.colosseum_videos_holder {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.colosseum_line_left {
+    width: 160px;
+    height: 10px;
+    background-color: #FF9100;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.colosseum_videos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colosseum_video_title_holder {
+    display: flex;
+}
+
+.colosseum_video_title_holder img {
+    width: 22px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.colosseum_video_title {
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.colosseum_video_thumbnails {
+    display: flex;
+    flex-direction: column;
+    height: 439px;
+    max-width: 339px;
+    width: 100%;
+}
+
+.colosseum_video_counter {
+    margin-bottom: 22px;
+    border-bottom: 1px solid #707070;
+    text-align: right;
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 13px;
+    padding-bottom: 5px;
+}
+
+.colosseum_thumbnail_videos_holder {
+    height: 392px;
+    overflow-y: scroll;
+}
+
+.colosseum_thumbnail_video {
+    padding: 6px 0px 7px 21px;
+    display: flex;
+    cursor: pointer;
+}
+
+.colosseum_thumbnail_video.active {
+    background-color: #707070;
+}
+
+.colosseum_thumbnail_title {
+    font-size: 10px;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 13px;
+    padding-left: 8px;
+}
+
+.colosseum_gallery_title {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 48px;
+}
+
+.colosseum_images_holder {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.colosseum_line_right {
+    width: 160px;
+    height: 10px;
+    background-color: #FF9100;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.colosseum_gallery_holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.colosseum_image_holder {
+    width: 184px;
+    height: 184px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.colosseum_image_holder.hidde_image {
+    display: none;
+}
+
+.colosseum_image_holder:nth-child(5n + 5) {
+    margin-right: 0px;
+}
+
+.colosseum_image {
+    width: 184px;
+    height: 184px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.colosseum_gallery_see_more {
+    font-size: 20px;
+    line-height: 22px;
+    color: #FF9100;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+}
+
+.colosseum_gallery_see_more svg {
+    width: 12px;
+    height: 12px;
+    margin-left: 7px;
+}
+
+.colosseum_gallery_holder .close-modal {
+    position: absolute;
+    top: 100px;
+    right: 0;
+}
+
+.colosseum_gallery_holder .modal-dialog {
+    max-width: 800px;
+    height: 750px;
+    display: flex;
+    align-items: center;
+}
+
+.colosseum_gallery_holder .modal-content {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.colosseum_gallery_holder .fotorama__nav-wrap {
+    margin-top: 10px;
+}
+
+.colosseum_gallery_modal {
+    background-color: rgba(0, 0, 0, 0.8);
+}

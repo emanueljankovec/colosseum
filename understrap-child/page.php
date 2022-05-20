@@ -40,7 +40,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 					}
 				}
 				?>
-				aaaaaa
 
 			</main><!-- #main -->
 

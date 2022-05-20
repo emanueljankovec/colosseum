@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100vh - 60px);
+    /* height: calc(100vh - 60px); */
 }
 
 .colosseum_about_us_main_photo {
@@ -145,7 +145,7 @@
 }
 
 .colosseum_musican_name {
-    font-size: 20px;
+    font-size: 30px;
     line-height: 28px;
     color: #FFFFFF;
     display: flex;
@@ -156,6 +156,7 @@
 .colosseum_musican_name span {
     font-weight: bold;
     color: #FF9100;
+    font-size: 20px;
 }
 
 .colosseum_musican_description {
